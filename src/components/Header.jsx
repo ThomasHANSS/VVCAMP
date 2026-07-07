@@ -4,10 +4,7 @@ export default function Header(props) {
   return (
     <div className="header">
       <div className="header-logo" onClick={onLogoClick}>
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcSet="/logo/vvcamp-white.svg" />
-          <img src="/logo/vvcamp-black.svg" alt="VVCAMP" className="header-logo-img" />
-        </picture>
+        <img src="/logo/vvcamp-black.svg" alt="VVCAMP" className="header-logo-img" />
         <p className="header-sub">{SUB[lang]}</p>
       </div>
       <button className="lang-btn" onClick={function () { setLang(lang === 'fr' ? 'en' : 'fr'); }}>
