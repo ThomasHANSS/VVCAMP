@@ -7,7 +7,7 @@ export default function Footer(props) {
       <p>
         {L[lang] || L.fr}{' '}
         <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>
-        {' · '}Phytomia v1.0 · Thomas Hanss
+        {' · '}VVCAMP v1.0 · Villes Vivantes
                 {lastUpdated ? ' · ' + (lang === 'fr' ? 'Maj' : 'Updated') + ': ' + lastUpdated.slice(0, 10) : ''}
       </p>
     </div>

@@ -1,8 +1,8 @@
 {
-  "name": "phytomia",
+  "name": "vvcamp",
   "version": "1.0.0",
   "description": "Explorateur d'interactions plantes × insectes en Europe",
-  "author": "Thomas Hanss <thomas.hanss@vivantes.fr>",
+  "author": "Villes Vivantes <thomas.hanss@vivantes.fr>",
   "license": "CC-BY-SA-4.0",
   "type": "module",
   "scripts": {

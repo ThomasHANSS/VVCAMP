@@ -64,7 +64,7 @@ export default function SpeciesDetail(props) {
     var gfL = { tree: lang === "fr" ? "Arbre" : "Tree", shrub: lang === "fr" ? "Arbuste" : "Shrub", climber: lang === "fr" ? "Grimpante" : "Climber", herb: lang === "fr" ? "Herbac\u00e9e" : "Herb", grass: lang === "fr" ? "Gramin\u00e9e" : "Grass" };
 
     var cn = species.common ? species.common[lang] || "" : "";
-    var h = "<!DOCTYPE html><html><head><meta charset='utf-8'><title>" + species.sci + " \u2014 Phytomia</title>";
+    var h = "<!DOCTYPE html><html><head><meta charset='utf-8'><title>" + species.sci + " \u2014 VVCAMP</title>";
     h += "<style>body{font-family:Georgia,serif;margin:40px;color:#1a1a1a;max-width:800px}h1{font-size:22px;color:#10b981;margin:0 0 4px}h1 em{font-weight:normal}.sub{font-size:14px;color:#666;margin:0 0 16px}.meta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px;padding:12px 16px;background:#f8f8f8;border-radius:8px;font-size:13px}.badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600}.sec{margin:24px 0 8px;padding:8px 0 4px;border-bottom:2px solid;font-size:16px;font-weight:600}table{width:100%;border-collapse:collapse;margin:8px 0 16px;font-size:12px}th{text-align:left;padding:6px 8px;background:#f5f5f5;border-bottom:1px solid #ddd;font-size:11px;color:#666}td{padding:5px 8px;border-bottom:1px solid #eee}td em{font-weight:500}.foot{margin-top:30px;padding-top:12px;border-top:1px solid #ddd;font-size:10px;color:#999}@media print{body{margin:20px}}</style></head><body>";
     h += "<h1><em>" + species.sci + "</em></h1>";
     h += "<p class='sub'>" + cn + (species.family ? " \u2014 " + species.family : "") + (species.order ? " (" + species.order + ")" : "") + "</p>";
@@ -89,7 +89,7 @@ export default function SpeciesDetail(props) {
       });
       h += "</table>";
     });
-    h += "<div class='foot'><p><strong>Phytomia</strong> \u2014 " + (lang === "fr" ? "Explorateur d\u2019interactions plantes \u00d7 insectes en Europe" : "Plant \u00d7 insect interaction explorer for Europe") + "</p>";
+    h += "<div class='foot'><p><strong>VVCAMP</strong> \u2014 " + (lang === "fr" ? "Explorateur d\u2019interactions plantes \u00d7 insectes en Europe" : "Plant \u00d7 insect interaction explorer for Europe") + "</p>";
     h += "<p>" + (lang === "fr" ? "Donn\u00e9es : " : "Data: ") + "EuPPollNet, GloBI, DoPI, DBIF, EuropeanHostData, HOSTS NHM, Mangal, Web of Life, GBIF</p>";
     h += "<p>" + (lang === "fr" ? "Licence : CC BY-SA 4.0 \u2014 Auteur : Thomas Hanss" : "License: CC BY-SA 4.0 \u2014 Author: Thomas Hanss") + "</p>";
     h += "<p>" + (lang === "fr" ? "G\u00e9n\u00e9r\u00e9 le " : "Generated on ") + new Date().toLocaleDateString() + "</p>";

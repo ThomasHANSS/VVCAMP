@@ -1,12 +1,12 @@
-# 🌿 Phytomia
+# 🌿 VVCAMP
 
 **Explorateur d'interactions plantes × insectes en Europe**
 *Plant × insect interaction explorer for Europe*
 
-Phytomia est une application web open-source qui permet d'explorer les interactions documentées entre plantes et insectes en Europe. Elle agrège, harmonise et met en relation les données issues de treize bases scientifiques en accès libre, couvrant 270496 interactions entre 17168 espèces végétales et 27494 espèces d'insectes.
+VVCAMP est une application web open-source qui permet d'explorer les interactions documentées entre plantes et insectes en Europe. Elle agrège, harmonise et met en relation les données issues de treize bases scientifiques en accès libre, couvrant 270496 interactions entre 17168 espèces végétales et 27494 espèces d'insectes.
 
-**Site** : [https://ThomasHANSS.github.io/phytomia/](https://ThomasHANSS.github.io/phytomia/)
-**Auteur** : Thomas Hanss — [thomas.hanss@vivantes.fr](mailto:thomas.hanss@vivantes.fr)
+**Site** : [https://vv.camp](https://vv.camp)
+**Auteur** : Villes Vivantes — [thomas.hanss@vivantes.fr](mailto:thomas.hanss@vivantes.fr)
 **Licence** : [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
 ---
@@ -68,7 +68,7 @@ Phytomia est une application web open-source qui permet d'explorer les interacti
 
 ## Sources de données
 
-Phytomia agrège six bases de données scientifiques complémentaires, couvrant des types d'interactions différents (pollinisation, herbivorie, parasitisme) et des zones géographiques variées (pan-européen, Grande-Bretagne, mondial).
+VVCAMP agrège six bases de données scientifiques complémentaires, couvrant des types d'interactions différents (pollinisation, herbivorie, parasitisme) et des zones géographiques variées (pan-européen, Grande-Bretagne, mondial).
 
 ### EuPPollNet — European Plant-Pollinator Networks
 
@@ -234,7 +234,7 @@ Le pipeline applique plusieurs contrôles de qualité :
 
 Les différentes bases utilisent des vocabulaires hétérogènes pour décrire les interactions. Le pipeline normalise vers 12 types :
 
-| Type Phytomia | Sources | Termes d'origine |
+| Type VVCAMP | Sources | Termes d'origine |
 |---|---|---|
 | `pollination` | EuPPollNet, GloBI | pollinates, visits flowers of |
 | `folivorie` | EuropeanHostData, DBIF, GloBI | Folivore, leaf miner, eats |
@@ -267,7 +267,7 @@ Le mapping se fait par genre d'abord (plus précis), puis par famille en fallbac
 
 ## Résilience des données (snapshots)
 
-Les bases de données scientifiques peuvent disparaître : serveur en panne, DOI cassé, changement de politique d'accès, fin de financement. Phytomia se protège avec un système de snapshots automatiques.
+Les bases de données scientifiques peuvent disparaître : serveur en panne, DOI cassé, changement de politique d'accès, fin de financement. VVCAMP se protège avec un système de snapshots automatiques.
 
 Après chaque parsing réussi, le pipeline archive une copie du fichier parsé dans `data/snapshots/<source>/`. Ce dossier est commité dans le repo Git — il survit à tout. Si lors d'un refresh automatique une source est inaccessible, le pipeline restaure automatiquement le dernier snapshot connu. Les données ne disparaissent jamais — elles peuvent juste devenir anciennes.
 
@@ -278,7 +278,7 @@ Le `manifest.json` contient pour chaque source : date du dernier snapshot, hash 
 ## Architecture technique
 
 ```
-phytomia/
+vvcamp/
 ├── .github/workflows/
 │   └── refresh-deploy.yml        ← GitHub Actions : build + deploy
 ├── public/
@@ -339,8 +339,8 @@ phytomia/
 ### 1. Cloner et installer
 
 ```bash
-git clone https://github.com/ThomasHANSS/phytomia.git
-cd phytomia
+git clone https://github.com/thomashanss/vv.camp.git
+cd vv.camp
 npm install
 ```
 
@@ -378,7 +378,7 @@ cp output/*.json public/data/
 npm run dev
 ```
 
-L'app est accessible sur `http://localhost:5173/phytomia/`.
+L'app est accessible sur `http://localhost:5173/`.
 
 ### 4. Déployer
 
@@ -388,7 +388,7 @@ Le workflow GitHub Actions se déclenche automatiquement à chaque push sur `mai
 
 ## Statuts de menace IUCN
 
-Phytomia affiche le statut de conservation de chaque espèce via des badges colorés. Les données proviennent de l'**API GBIF** qui redistribue les évaluations de la Red List IUCN — aucune clé API IUCN n'est nécessaire.
+VVCAMP affiche le statut de conservation de chaque espèce via des badges colorés. Les données proviennent de l'**API GBIF** qui redistribue les évaluations de la Red List IUCN — aucune clé API IUCN n'est nécessaire.
 
 **2 792 espèces évaluées** dont 17 CR, 60 EN, 83 VU, 93 NT, 2 396 LC.
 
@@ -403,14 +403,14 @@ Les badges apparaissent dans toutes les vues : fiches espèces, classements, gra
 1. Ajouter l'entrée dans `config/sources.json`
 2. Créer un script `scripts/XX_parse_<source>.py` produisant un CSV normalisé
 3. Format attendu : `plant_name, insect_name, interaction_type, source_db, n_obs, geo, year_range`
-4. Les `interaction_type` doivent utiliser la typologie Phytomia (voir `src/utils/types.js`)
+4. Les `interaction_type` doivent utiliser la typologie VVCAMP (voir `src/utils/types.js`)
 5. Le script `07_merge.py` intègre automatiquement tout CSV présent dans `data/parsed/`
 
 ---
 
 ## Crédits et citations
 
-Si vous utilisez Phytomia dans un contexte scientifique, merci de citer les bases sources :
+Si vous utilisez VVCAMP dans un contexte scientifique, merci de citer les bases sources :
 
 - Lanuza, J.B. et al. (2025). EuPPollNet: a European database of plant-pollinator networks. *Global Ecology and Biogeography*, 34, e70000. DOI: [10.1111/geb.70000](https://doi.org/10.1111/geb.70000)
 - Trombik, J. et al. (2024). EuropeanHostData: a dataset of European tree-insect herbivore interactions. *Dryad*. DOI: [10.5061/dryad.3n5tb2rrx](https://doi.org/10.5061/dryad.3n5tb2rrx)
@@ -426,6 +426,6 @@ Icônes : silhouettes SVG originales basées sur la morphologie des ordres d'ins
 
 ## Contact
 
-Thomas Hanss — [thomas.hanss@vivantes.fr](mailto:thomas.hanss@vivantes.fr)
+Villes Vivantes — [thomas.hanss@vivantes.fr](mailto:thomas.hanss@vivantes.fr)
 
 Contributions bienvenues : ouvrir une *issue* ou une *pull request* sur le repo GitHub.

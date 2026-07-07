@@ -121,7 +121,7 @@ export default function GardenGraph(props) {
       var blob = new Blob([svgData], { type: 'image/svg+xml' });
       var url = URL.createObjectURL(blob);
       var a = document.createElement('a');
-      a.href = url; a.download = 'phytomia-jardin.svg';
+      a.href = url; a.download = 'vvcamp-jardin.svg';
       a.click(); URL.revokeObjectURL(url);
       return;
     }
@@ -138,7 +138,7 @@ export default function GardenGraph(props) {
       ctx.drawImage(img, 0, 0, w, h);
       var a = document.createElement('a');
       a.href = canvas.toDataURL('image/png');
-      a.download = 'phytomia-jardin.png';
+      a.download = 'vvcamp-jardin.png';
       a.click();
     };
     img.src = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svgData)));

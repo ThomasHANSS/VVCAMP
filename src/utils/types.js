@@ -1,5 +1,5 @@
 /**
- * Phytomia — Interaction type system
+ * VVCAMP — Interaction type system
  * 
  * 12 interaction types grouped in 6 families.
  * Each type has a color (from its family), a dash pattern, a stroke width,

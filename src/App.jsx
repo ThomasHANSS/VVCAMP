@@ -1,6 +1,6 @@
 import { Lightbox, seedPhotoCache } from './components/Thumb';
 import { useState, useMemo, useEffect, useRef } from 'react';
-import { usePhytomiaData } from './hooks/useData';
+import { useVvcampData } from './hooks/useData';
 import Header from './components/Header';
 import SearchBar from './components/SearchBar';
 import Tabs from './components/Tabs';
@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 import { TYPES, FAMILIES } from './utils/types';
 
 export default function App() {
-  var data = usePhytomiaData();
+  var data = useVvcampData();
   var _l = useState('fr'), lang = _l[0], setLang = _l[1];
   var _v = useState('ranking'), viewMode = _v[0], _setViewMode = _v[1];
   function setViewMode(m) {

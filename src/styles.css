@@ -331,3 +331,9 @@
   .app { max-width: 100%; padding: 0; }
   .ranking-grid { grid-template-columns: 1fr 1fr; }
 }
+
+.header-logo-img {
+  height: 34px;
+  width: auto;
+  display: block;
+}

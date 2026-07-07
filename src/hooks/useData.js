@@ -28,7 +28,7 @@ function expandIx(x) {
   };
 }
 
-export function usePhytomiaData() {
+export function useVvcampData() {
   var _d = useState({ plants: [], insects: [], interactions: [], loading: true, error: null, lastUpdated: null });
   var data = _d[0], setData = _d[1];
 
