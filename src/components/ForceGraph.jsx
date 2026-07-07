@@ -420,6 +420,8 @@ export default function ForceGraph(props) {
             el.style.pointerEvents = 'none';
             var img = document.createElement('img');
             img.src = photo.url;
+            img.loading = 'lazy';
+            img.decoding = 'async';
             img.style.width = '100%';
             img.style.height = '100%';
             img.style.objectFit = 'cover';
