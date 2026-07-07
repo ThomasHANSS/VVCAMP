@@ -179,10 +179,7 @@ export default function App() {
   if (data.loading) {
     return (
       <div className="app" style={{ textAlign: 'center', paddingTop: 80 }}>
-        <h1 style={{ fontSize: 28, fontWeight: 700 }}>
-          <span style={{ color: '#10b981' }}>Phyto</span>
-          <span style={{ color: '#f59e0b' }}>mia</span>
-        </h1>
+        <img src="/logo/vvcamp-black.svg" alt="VVCAMP" style={{ height: 34 }} />
         <p style={{ color: '#888', marginTop: 12 }}>Chargement des données…</p>
       </div>
     );
@@ -191,10 +188,7 @@ export default function App() {
   if (data.error) {
     return (
       <div className="app" style={{ textAlign: 'center', paddingTop: 80 }}>
-        <h1 style={{ fontSize: 28, fontWeight: 700 }}>
-          <span style={{ color: '#10b981' }}>Phyto</span>
-          <span style={{ color: '#f59e0b' }}>mia</span>
-        </h1>
+        <img src="/logo/vvcamp-black.svg" alt="VVCAMP" style={{ height: 34 }} />
         <p style={{ color: '#f43f5e', marginTop: 12 }}>Erreur : {data.error}</p>
       </div>
     );
