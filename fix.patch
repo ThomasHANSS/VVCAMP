@@ -1,0 +1,62 @@
+diff --git a/src/components/ForceGraph.jsx b/src/components/ForceGraph.jsx
+index 896c8b8..f98df19 100644
+--- a/src/components/ForceGraph.jsx
++++ b/src/components/ForceGraph.jsx
+@@ -420,6 +420,8 @@ export default function ForceGraph(props) {
+             el.style.pointerEvents = 'none';
+             var img = document.createElement('img');
+             img.src = photo.url;
++            img.loading = 'lazy';
++            img.decoding = 'async';
+             img.style.width = '100%';
+             img.style.height = '100%';
+             img.style.objectFit = 'cover';
+diff --git a/src/components/Thumb.jsx b/src/components/Thumb.jsx
+index 171c849..105d815 100644
+--- a/src/components/Thumb.jsx
++++ b/src/components/Thumb.jsx
+@@ -91,16 +91,6 @@ function useLightbox() {
+ }
+ 
+ var _photoCache = {};
+-var _pendingFetches = {};
+-var _fetchQueue = [];
+-var _fetchRunning = false;
+-function _processQueue() {
+-  if (_fetchRunning || _fetchQueue.length === 0) return;
+-  _fetchRunning = true;
+-  var item = _fetchQueue.shift();
+-  _doFetch(item.sci);
+-  setTimeout(function() { _fetchRunning = false; _processQueue(); }, 150);
+-}
+ 
+ export function seedPhotoCache(cache) {
+   Object.keys(cache).forEach(function(sci) {
+@@ -116,20 +106,13 @@ export function seedPhotoCache(cache) {
+   });
+ }
+ 
++// Lecture pure cache, aucun appel reseau : resolution synchrone.
++// On memorise aussi les "pas de photo" pour ne jamais retraiter deux fois la meme espece.
+ export function fetchPhoto(sci, cb) {
+-  if (_photoCache[sci] !== undefined) { cb(_photoCache[sci]); return; }
+-  if (_pendingFetches[sci]) { _pendingFetches[sci].push(cb); return; }
+-  _pendingFetches[sci] = [cb];
+-  _fetchQueue.push({ sci: sci });
+-  _processQueue();
+-}
+-
+-function _doFetch(sci) {
+-  // No runtime API calls - use pre-loaded cache only
+-  var info = _photoCache[sci] || { photo: null, inatId: null };
+-  var cbs = _pendingFetches[sci] || [];
+-  delete _pendingFetches[sci];
+-  cbs.forEach(function(c) { c(info); });
++  if (_photoCache[sci] === undefined) {
++    _photoCache[sci] = { photo: null, inatId: null };
++  }
++  cb(_photoCache[sci]);
+ }
+ 
+ export default function Thumb(props) {
+

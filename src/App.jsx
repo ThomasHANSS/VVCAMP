@@ -8,6 +8,7 @@ import Ranking from './components/Ranking';
 import Garden from './components/Garden';
 import SpeciesDetail from './components/SpeciesDetail';
 import Footer from './components/Footer';
+import About from './components/About';
 import { TYPES, FAMILIES } from './utils/types';
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
   function setViewMode(m) {
     _setViewMode(m);
     if (m === 'garden') { writeHash('garden'); }
+    else if (m === 'about') { writeHash('about'); }
     else if (!selectedId) { writeHash('home'); }
   }
   var _eu = useState(true), euOnly = _eu[0], setEuOnly = _eu[1];
@@ -30,6 +32,7 @@ export default function App() {
     var raw = decodeURIComponent(window.location.hash.slice(1));
     if (!raw) return null;
     if (raw === 'mon_jardin') return { page: 'garden' };
+    if (raw === 'a_propos') return { page: 'about' };
     var parts = raw.split('/');
     return { page: 'species', sci: parts[0].replace(/_/g, ' '), view: parts[1] || 'fiche' };
   }
@@ -37,6 +40,7 @@ export default function App() {
   function writeHash(page, sci, view) {
     var url;
     if (page === 'garden') { url = '#mon_jardin'; }
+    else if (page === 'about') { url = '#a_propos'; }
     else if (page === 'species' && sci) {
       var h = sci.replace(/ /g, '_');
       url = '#' + ((view && view !== 'fiche') ? h + '/' + view : h);
@@ -53,6 +57,7 @@ export default function App() {
     var h = readHash();
     if (!h) return;
     if (h.page === 'garden') { _setViewMode('garden'); return; }
+    if (h.page === 'about') { _setViewMode('about'); return; }
     var sp = data.plants.find(function(p){ return p.sci === h.sci; })
           || data.insects.find(function(i){ return i.sci === h.sci; });
     if (!sp) return;
@@ -72,6 +77,7 @@ export default function App() {
         setSelectedId(null); _setViewMode('ranking'); return;
       }
       if (h.page === 'garden') { setSelectedId(null); _setViewMode('garden'); return; }
+      if (h.page === 'about') { setSelectedId(null); _setViewMode('about'); return; }
       if (h.page === 'species') {
         var sp = data.plants.find(function(p){return p.sci===h.sci;}) || data.insects.find(function(i){return i.sci===h.sci;});
         if (sp) { setSelectedId(sp.id); setSpeciesView(h.view || 'fiche'); }
@@ -89,6 +95,7 @@ export default function App() {
         setSelectedId(null); _setViewMode('ranking'); return;
       }
       if (h.page === 'garden') { setSelectedId(null); _setViewMode('garden'); return; }
+      if (h.page === 'about') { setSelectedId(null); _setViewMode('about'); return; }
       if (h.page === 'species') {
         var sp = data.plants.find(function(p){return p.sci===h.sci;}) || data.insects.find(function(i){return i.sci===h.sci;});
         if (sp) { setSelectedId(sp.id); setSpeciesView(h.view || 'fiche'); }
@@ -239,6 +246,8 @@ export default function App() {
               onSelect={go} speciesView={speciesView} onViewChange={function(v) { setSpeciesView(v); var sp = data.plants.find(function(p){return p.id===selectedId;}) || data.insects.find(function(i){return i.id===selectedId;}); if (sp) writeHash('species', sp.sci, v); }}
             />
           )}
+
+          {viewMode === 'about' && (<About lang={lang} />)}
 
           <Footer lang={lang} lastUpdated={fData.lastUpdated} />
         </div>

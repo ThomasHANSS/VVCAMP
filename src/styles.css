@@ -337,3 +337,28 @@
   width: auto;
   display: block;
 }
+
+/* ── About page ── */
+.about { padding: 4px 2px 24px; }
+.about-title { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+.about-desc { font-size: 14px; color: var(--text2); line-height: 1.5; margin-bottom: 20px; }
+.about-stats {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px; margin-bottom: 24px;
+}
+.about-stat { background: var(--bg3); border-radius: 8px; padding: 12px; text-align: center; }
+.about-stat-value { font-size: 20px; font-weight: 700; color: var(--green); }
+.about-stat-label { font-size: 11px; color: var(--text3); margin-top: 2px; }
+.about-section-title { font-size: 15px; font-weight: 600; margin: 20px 0 10px; }
+.about-sources { display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px; }
+.about-source {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  padding: 8px 10px; border: 1px solid var(--border); border-radius: 6px; font-size: 13px;
+}
+.about-source-name { font-weight: 600; }
+.about-source-desc { color: var(--text2); flex: 1; }
+.about-source-license {
+  font-size: 10px; font-weight: 700; color: var(--text3);
+  border: 1px solid var(--border); border-radius: 10px; padding: 1px 6px;
+}
+.about-license, .about-credits { font-size: 13px; color: var(--text2); line-height: 1.6; }
