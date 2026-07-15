@@ -3,7 +3,7 @@
 **Explorateur d'interactions plantes × insectes en Europe**
 *Plant × insect interaction explorer for Europe*
 
-VVCAMP est une application web open-source qui permet d'explorer les interactions documentées entre plantes et insectes en Europe. Elle agrège, harmonise et met en relation les données issues de treize bases scientifiques en accès libre, couvrant 270496 interactions entre 17168 espèces végétales et 27494 espèces d'insectes.
+VVCAMP est une application web open-source qui permet d'explorer les interactions documentées entre plantes et insectes en Europe. Elle agrège, harmonise et met en relation les données issues de quatorze bases scientifiques en accès libre, couvrant 339 639 interactions entre 21 194 espèces végétales et 39 258 espèces d'insectes.
 
 **Site** : [https://vv.camp](https://vv.camp)
 **Auteur** : Villes Vivantes — [thomas.hanss@vivantes.fr](mailto:thomas.hanss@vivantes.fr)
@@ -18,7 +18,7 @@ VVCAMP est une application web open-source qui permet d'explorer les interaction
 | Interactions documentées | **270 496** paires plante × insecte |
 | Espèces végétales | **17 168** (arbres, arbustes, herbacées, graminées, grimpantes) |
 | Espèces d'insectes | **27 494** (hyménoptères, lépidoptères, coléoptères, diptères, hémiptères) |
-| Bases de données intégrées | **6** sources scientifiques open-access |
+| Bases de données intégrées | **7** sources scientifiques open-access |
 | Interactions multi-sources | **7 494** paires confirmées par au moins 2 bases indépendantes |
 | Types d'interactions | **8** types actifs : pollinisation, folivorie, hôte larvaire, prédateur, parasitoïde, suceur de sève, xylophage, gallicole |
 | Espèces avec statut IUCN | **2 792** (dont 117 menacées CR/EN/VU) |

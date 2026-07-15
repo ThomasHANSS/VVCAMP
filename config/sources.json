@@ -182,6 +182,15 @@
       "scope": "Plant native distributions (TDWG regions)",
       "records": 4045,
       "note": "Used for native/non-native/extra-EU classification"
+    },
+    {
+      "id": "bladmineerders",
+      "name": "Plant Parasites of Europe (bladmineerders.nl)",
+      "ref": "Ellis, W.N. (2001-2026)",
+      "url": "https://bladmineerders.nl/",
+      "license": "CC BY-NC-SA 4.0",
+      "scope": "Leafminers, galls, plant parasites of Europe - 145K relations",
+      "records": 81175
     }
   ],
   "interaction_type_mapping": {
