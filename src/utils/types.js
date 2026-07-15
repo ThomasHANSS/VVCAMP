@@ -7,17 +7,19 @@
  */
 
 export var FAMILIES = {
-  mutualisme:   { color: '#10b981', fr: 'Pollinisateurs & hôtes',  en: 'Pollinators & hosts' },
+  pollinisation: { color: '#10b981', fr: 'Pollinisateurs',          en: 'Pollinators' },
+  hote:          { color: '#22c55e', fr: 'Hôtes larvaires',          en: 'Larval hosts' },
   phyto_fol:    { color: '#eab308', fr: 'Mangeurs de feuilles',    en: 'Leaf feeders' },
   phyto_struct: { color: '#92400e', fr: 'Mangeurs de bois',       en: 'Wood feeders' },
   phyto_repro:  { color: '#f43f5e', fr: 'Mangeurs de fruits/fleurs', en: 'Fruit/flower feeders' },
   suceur:       { color: '#a855f7', fr: 'Suceurs de sève',         en: 'Sap feeders' },
-  auxiliaire:   { color: '#0ea5e9', fr: 'Prédateurs & parasitoïdes', en: 'Predators & parasitoids' },
+  predateur_fam:   { color: '#0ea5e9', fr: 'Prédateurs',       en: 'Predators' },
+  parasitoide_fam: { color: '#06b6d4', fr: 'Parasitoïdes',     en: 'Parasitoids' },
 };
 
 export var TYPES = {
-  pollination:   { fam: 'mutualisme',  fr: 'Pollinisation',        en: 'Pollination',        dash: 'none',    w: 2.5, icon: 'M0-3.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7zM0-1.5l-2-2M0-1.5l2-2M0-1.5l0-2.5' },
-  hote_larvaire: { fam: 'mutualisme',  fr: 'Plante hôte larvaire', en: 'Larval host plant',  dash: '8 3 2 3', w: 2,   icon: 'M-3 0C-3-3 3-3 3 0C3 3-3 3-3 0z' },
+  pollination:   { fam: 'pollinisation',  fr: 'Pollinisation',        en: 'Pollination',        dash: 'none',    w: 2.5, icon: 'M0-3.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7zM0-1.5l-2-2M0-1.5l2-2M0-1.5l0-2.5' },
+  hote_larvaire: { fam: 'hote',  fr: 'Plante hôte larvaire', en: 'Larval host plant',  dash: '8 3 2 3', w: 2,   icon: 'M-3 0C-3-3 3-3 3 0C3 3-3 3-3 0z' },
   folivorie:     { fam: 'phyto_fol',   fr: 'Folivorie',            en: 'Leaf feeding',       dash: 'none',    w: 2.2, icon: 'M0-4C-3-2-3 2 0 4C3 2 3-2 0-4zM0-4l0 8' },
   mineuse:       { fam: 'phyto_fol',   fr: 'Mineuse',              en: 'Leaf mining',        dash: '6 3',     w: 1.8, icon: 'M0-4C-3-2-3 2 0 4C3 2 3-2 0-4zM-2 0l4 0' },
   gallicole:     { fam: 'phyto_fol',   fr: 'Gallicole',            en: 'Gall making',        dash: '3 3',     w: 1.8, icon: 'M0-3a3 3 0 1 1 0 6 3 3 0 0 1 0-6z' },
@@ -26,8 +28,8 @@ export var TYPES = {
   frugivore:     { fam: 'phyto_repro', fr: 'Frugivore/granivore',  en: 'Fruit/seed feeding', dash: 'none',    w: 2.2, icon: 'M0-3a3 3 0 1 1 0 6 3 3 0 0 1 0-6zM0-3l1-2' },
   florivore:     { fam: 'phyto_repro', fr: 'Florivore',            en: 'Flower feeding',     dash: '6 3',     w: 1.8, icon: 'M0-3.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7z' },
   suceur_seve:   { fam: 'suceur',      fr: 'Suceur de sève',       en: 'Sap sucking',        dash: 'none',    w: 2.2, icon: 'M0-4C-2-1-2 1 0 4C2 1 2-1 0-4z' },
-  predateur:     { fam: 'auxiliaire',  fr: 'Prédateur',            en: 'Predator',           dash: 'none',    w: 2,   icon: 'M-3 2l3-5 3 5z' },
-  parasitoide:   { fam: 'auxiliaire',  fr: 'Parasitoïde',          en: 'Parasitoid',         dash: '6 3',     w: 1.8, icon: 'M-3 0h6M0-3v6' },
+  predateur:     { fam: 'predateur_fam',  fr: 'Prédateur',            en: 'Predator',           dash: 'none',    w: 2,   icon: 'M-3 2l3-5 3 5z' },
+  parasitoide:   { fam: 'parasitoide_fam',  fr: 'Parasitoïde',          en: 'Parasitoid',         dash: '6 3',     w: 1.8, icon: 'M-3 0h6M0-3v6' },
 };
 
 export var FILTER_GROUPS = [
