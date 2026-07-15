@@ -3,9 +3,9 @@ var L = {
     title: 'À propos de VVCAMP',
     desc: "VVCAMP est une application web open-source qui permet d'explorer les interactions documentées entre plantes et insectes en Europe. Elle agrège, harmonise et met en relation les données issues de bases scientifiques en accès libre.",
     stats: [
-      { label: 'Interactions documentées'  value: '339 639' },
-      { label: 'Espèces végétales'  value: '21 194' },
-      { label: "Espèces d'insectes"  value: '39 258' },
+      { label: 'Interactions documentées', value: '339 639' },
+      { label: 'Espèces végétales', value: '21 194' },
+      { label: "Espèces d'insectes", value: '39 258' },
       { label: 'Bases de données intégrées', value: '14' },
       { label: 'Pays couverts', value: '23+' },
     ],
