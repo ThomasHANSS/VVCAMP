@@ -429,3 +429,8 @@ Icônes : silhouettes SVG originales basées sur la morphologie des ordres d'ins
 Villes Vivantes — [thomas.hanss@vivantes.fr](mailto:thomas.hanss@vivantes.fr)
 
 Contributions bienvenues : ouvrir une *issue* ou une *pull request* sur le repo GitHub.
+
+
+### Bladmineerders
+
+**Plant Parasites of Europe** (Ellis, W.N., 2001-2026) — 81 175 interactions mineuses, galles et parasites des plantes d'Europe. Licence CC BY-NC-SA 4.0. [bladmineerders.nl](https://bladmineerders.nl/)
