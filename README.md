@@ -15,9 +15,9 @@ VVCAMP est une application web open-source qui permet d'explorer les interaction
 
 | Indicateur | Volume |
 |---|---|
-| Interactions documentées | **270 496** paires plante × insecte |
-| Espèces végétales | **17 168** (arbres, arbustes, herbacées, graminées, grimpantes) |
-| Espèces d'insectes | **27 494** (hyménoptères, lépidoptères, coléoptères, diptères, hémiptères) |
+| Interactions documentées | **339 639** paires plante × insecte |
+| Espèces végétales | **21 194** (arbres, arbustes, herbacées, graminées, grimpantes) |
+| Espèces d'insectes | **39 258** (hyménoptères, lépidoptères, coléoptères, diptères, hémiptères) |
 | Bases de données intégrées | **7** sources scientifiques open-access |
 | Interactions multi-sources | **7 494** paires confirmées par au moins 2 bases indépendantes |
 | Types d'interactions | **8** types actifs : pollinisation, folivorie, hôte larvaire, prédateur, parasitoïde, suceur de sève, xylophage, gallicole |
