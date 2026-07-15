@@ -33,13 +33,15 @@ export var TYPES = {
 };
 
 export var FILTER_GROUPS = [
-  { key: 'all',          fr: 'Toutes',       en: 'All' },
-  { key: 'mutualisme',   fr: 'Pollinisation', en: 'Pollination' },
-  { key: 'phyto_fol',    fr: 'Foliaire',     en: 'Leaf' },
-  { key: 'phyto_struct', fr: 'Bois/racines', en: 'Wood/roots' },
-  { key: 'phyto_repro',  fr: 'Fruits/fleurs',en: 'Fruits/flowers' },
-  { key: 'suceur',       fr: 'Suceurs',      en: 'Sap' },
-  { key: 'auxiliaire',   fr: 'Auxiliaires',   en: 'Auxiliaries' },
+  { key: 'all',             fr: 'Toutes',          en: 'All' },
+  { key: 'pollinisation',   fr: 'Pollinisateurs',  en: 'Pollinators' },
+  { key: 'hote',            fr: 'Hôtes larvaires', en: 'Larval hosts' },
+  { key: 'phyto_fol',      fr: 'Foliaire',        en: 'Leaf' },
+  { key: 'phyto_struct',   fr: 'Bois/racines',    en: 'Wood/roots' },
+  { key: 'phyto_repro',    fr: 'Fruits/fleurs',   en: 'Fruits/flowers' },
+  { key: 'suceur',          fr: 'Suceurs de sève', en: 'Sap feeders' },
+  { key: 'predateur_fam',  fr: 'Prédateurs',      en: 'Predators' },
+  { key: 'parasitoide_fam',fr: 'Parasitoïdes',    en: 'Parasitoids' },
 ];
 
 export var STATUS_COLORS = {
